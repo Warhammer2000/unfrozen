@@ -263,8 +263,9 @@ GameObject:
   - component: {fileID: 61483740}
   - component: {fileID: 61483744}
   - component: {fileID: 61483743}
-  - component: {fileID: 61483742}
   - component: {fileID: 61483741}
+  - component: {fileID: 61483742}
+  - component: {fileID: 61483745}
   m_Layer: 5
   m_Name: MissionButton 9
   m_TagString: Untagged
@@ -373,7 +374,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -390,6 +391,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61483739}
   m_CullTransparentMesh: 1
+--- !u!114 &61483745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61483739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &185441287
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,8 +514,9 @@ GameObject:
   - component: {fileID: 186972092}
   - component: {fileID: 186972096}
   - component: {fileID: 186972095}
-  - component: {fileID: 186972094}
   - component: {fileID: 186972093}
+  - component: {fileID: 186972094}
+  - component: {fileID: 186972097}
   m_Layer: 5
   m_Name: MissionButton
   m_TagString: Untagged
@@ -608,7 +625,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -625,6 +642,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186972091}
   m_CullTransparentMesh: 1
+--- !u!114 &186972097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186972091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &189672150
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,8 +668,9 @@ GameObject:
   - component: {fileID: 189672151}
   - component: {fileID: 189672155}
   - component: {fileID: 189672154}
-  - component: {fileID: 189672153}
   - component: {fileID: 189672152}
+  - component: {fileID: 189672153}
+  - component: {fileID: 189672156}
   m_Layer: 5
   m_Name: MissionButton
   m_TagString: Untagged
@@ -746,7 +779,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -763,6 +796,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189672150}
   m_CullTransparentMesh: 1
+--- !u!114 &189672156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189672150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &196071816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1108,7 @@ GameObject:
   - component: {fileID: 238801786}
   - component: {fileID: 238801785}
   m_Layer: 5
-  m_Name: MissionName
+  m_Name: TaskName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,8 +1242,9 @@ GameObject:
   - component: {fileID: 269106998}
   - component: {fileID: 269107002}
   - component: {fileID: 269107001}
-  - component: {fileID: 269107000}
   - component: {fileID: 269106999}
+  - component: {fileID: 269107000}
+  - component: {fileID: 269107003}
   m_Layer: 5
   m_Name: MissionButton 6
   m_TagString: Untagged
@@ -1304,7 +1353,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1321,6 +1370,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269106997}
   m_CullTransparentMesh: 1
+--- !u!114 &269107003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269106997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &270426917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1398,7 @@ GameObject:
   - component: {fileID: 270426920}
   - component: {fileID: 270426919}
   m_Layer: 5
-  m_Name: MissionDescriptionPanel
+  m_Name: TaskDescriptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1425,8 +1489,9 @@ GameObject:
   - component: {fileID: 296309343}
   - component: {fileID: 296309345}
   - component: {fileID: 296309344}
+  - component: {fileID: 296309346}
   m_Layer: 5
-  m_Name: Mission
+  m_Name: Task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1493,6 +1558,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296309342}
   m_CullTransparentMesh: 1
+--- !u!114 &296309346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296309342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8166e739e63e1324a88158fea40ddfea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 0}
+  Icon: {fileID: 0}
+  description: {fileID: 0}
 --- !u!1 &299158147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1602,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 417835565}
+  - {fileID: 1000716624}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1843,7 +1924,7 @@ GameObject:
   - component: {fileID: 356605688}
   - component: {fileID: 356605687}
   m_Layer: 5
-  m_Name: MissionIcon
+  m_Name: TaskIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2370,7 +2451,7 @@ GameObject:
   - component: {fileID: 587913863}
   - component: {fileID: 587913862}
   m_Layer: 5
-  m_Name: MissionName
+  m_Name: TaskName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2698,8 +2779,9 @@ GameObject:
   - component: {fileID: 793431369}
   - component: {fileID: 793431373}
   - component: {fileID: 793431372}
-  - component: {fileID: 793431371}
   - component: {fileID: 793431370}
+  - component: {fileID: 793431371}
+  - component: {fileID: 793431374}
   m_Layer: 5
   m_Name: MissionButton 7
   m_TagString: Untagged
@@ -2808,7 +2890,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2825,6 +2907,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793431368}
   m_CullTransparentMesh: 1
+--- !u!114 &793431374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793431368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &932495942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,8 +2933,9 @@ GameObject:
   - component: {fileID: 932495943}
   - component: {fileID: 932495947}
   - component: {fileID: 932495946}
-  - component: {fileID: 932495945}
   - component: {fileID: 932495944}
+  - component: {fileID: 932495945}
+  - component: {fileID: 932495948}
   m_Layer: 5
   m_Name: MissionButton 8
   m_TagString: Untagged
@@ -2946,7 +3044,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2963,6 +3061,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932495942}
   m_CullTransparentMesh: 1
+--- !u!114 &932495948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932495942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3243,51 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1000716623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000716624}
+  - component: {fileID: 1000716625}
+  m_Layer: 0
+  m_Name: CloudDownloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000716624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000716623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299158148}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000716625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000716623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c177f0558b5f6e14d8b25616b00da86d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://docs.google.com/spreadsheets/d/1eTlsSf9SBPKXmV9VbmXz_-3sgcfIzn6MHGwigan0Th4/edit#gid=0
 --- !u!1 &1035142693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,7 +3300,7 @@ GameObject:
   - component: {fileID: 1035142696}
   - component: {fileID: 1035142695}
   m_Layer: 5
-  m_Name: MissionIcon
+  m_Name: TaskIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3355,8 +3513,9 @@ GameObject:
   - component: {fileID: 1046799581}
   - component: {fileID: 1046799585}
   - component: {fileID: 1046799584}
-  - component: {fileID: 1046799583}
   - component: {fileID: 1046799582}
+  - component: {fileID: 1046799583}
+  - component: {fileID: 1046799586}
   m_Layer: 5
   m_Name: MissionButton 4
   m_TagString: Untagged
@@ -3465,7 +3624,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3482,6 +3641,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046799580}
   m_CullTransparentMesh: 1
+--- !u!114 &1046799586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046799580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &1092877403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,8 +3802,9 @@ GameObject:
   - component: {fileID: 1097163988}
   - component: {fileID: 1097163992}
   - component: {fileID: 1097163991}
-  - component: {fileID: 1097163990}
   - component: {fileID: 1097163989}
+  - component: {fileID: 1097163990}
+  - component: {fileID: 1097163993}
   m_Layer: 5
   m_Name: MissionButton 11
   m_TagString: Untagged
@@ -3738,7 +3913,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3755,6 +3930,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097163987}
   m_CullTransparentMesh: 1
+--- !u!114 &1097163993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097163987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &1106922714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,8 +4330,9 @@ GameObject:
   - component: {fileID: 1151762455}
   - component: {fileID: 1151762459}
   - component: {fileID: 1151762458}
-  - component: {fileID: 1151762457}
   - component: {fileID: 1151762456}
+  - component: {fileID: 1151762457}
+  - component: {fileID: 1151762460}
   m_Layer: 5
   m_Name: MissionButton 10
   m_TagString: Untagged
@@ -4250,7 +4441,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4267,6 +4458,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151762454}
   m_CullTransparentMesh: 1
+--- !u!114 &1151762460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151762454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &1160198195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,7 +5068,7 @@ RectTransform:
   - {fileID: 296309343}
   - {fileID: 1834983135}
   m_Father: {fileID: 2119767099}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5089,8 +5295,9 @@ GameObject:
   - component: {fileID: 1449744870}
   - component: {fileID: 1449744874}
   - component: {fileID: 1449744873}
-  - component: {fileID: 1449744872}
   - component: {fileID: 1449744871}
+  - component: {fileID: 1449744872}
+  - component: {fileID: 1449744875}
   m_Layer: 5
   m_Name: MissionButton 5
   m_TagString: Untagged
@@ -5199,7 +5406,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5216,6 +5423,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449744869}
   m_CullTransparentMesh: 1
+--- !u!114 &1449744875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449744869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &1608816055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5227,8 +5449,9 @@ GameObject:
   - component: {fileID: 1608816056}
   - component: {fileID: 1608816058}
   - component: {fileID: 1608816057}
-  - component: {fileID: 1608816059}
+  - component: {fileID: 1608816061}
   - component: {fileID: 1608816060}
+  - component: {fileID: 1608816059}
   m_Layer: 5
   m_Name: MissionButton 1
   m_TagString: Untagged
@@ -5278,7 +5501,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5354,6 +5577,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1608816061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608816055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 11400000, guid: 33d424688d2ec7f4e9547d48645f2a36, type: 2}
+  taskButton: {fileID: 1608816060}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &1657246467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5901,13 +6139,14 @@ GameObject:
   - component: {fileID: 1834983135}
   - component: {fileID: 1834983137}
   - component: {fileID: 1834983136}
+  - component: {fileID: 1834983138}
   m_Layer: 5
-  m_Name: Mission
+  m_Name: Task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834983135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5969,6 +6208,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834983134}
   m_CullTransparentMesh: 1
+--- !u!114 &1834983138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834983134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8166e739e63e1324a88158fea40ddfea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 0}
+  Icon: {fileID: 0}
+  description: {fileID: 0}
 --- !u!1 &1942502978
 GameObject:
   m_ObjectHideFlags: 0
@@ -6077,8 +6331,9 @@ GameObject:
   - component: {fileID: 1986191862}
   - component: {fileID: 1986191866}
   - component: {fileID: 1986191865}
-  - component: {fileID: 1986191864}
   - component: {fileID: 1986191863}
+  - component: {fileID: 1986191864}
+  - component: {fileID: 1986191867}
   m_Layer: 5
   m_Name: MissionButton 2
   m_TagString: Untagged
@@ -6187,7 +6442,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c82211601ad3fd94e9373c81d5c183c3, type: 3}
-  m_Type: 3
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6204,6 +6459,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986191861}
   m_CullTransparentMesh: 1
+--- !u!114 &1986191867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986191861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionModel: {fileID: 0}
+  taskButton: {fileID: 61483741}
+  taskPanel: {fileID: 296309346}
 --- !u!1 &2018425370
 GameObject:
   m_ObjectHideFlags: 0
@@ -6645,7 +6915,7 @@ RectTransform:
   m_Children:
   - {fileID: 1657246468}
   m_Father: {fileID: 2119767099}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6765,8 +7035,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1218489650}
-  - {fileID: 2109734948}
   - {fileID: 1361909497}
+  - {fileID: 2109734948}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6788,7 +7058,7 @@ GameObject:
   - component: {fileID: 2123271185}
   - component: {fileID: 2123271184}
   m_Layer: 5
-  m_Name: MissionDescriptionPanel
+  m_Name: TaskDescriptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
