@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(menuName = "Mission/New Mission", fileName = "Mission")]
-public class MissionModel : ScriptableObject
+[CreateAssetMenu(menuName = "Missions/Create mission", fileName = "Mission")]
+public class MissionDescription : ScriptableObject
 {
-    public int id;
+    public float id;
     public string title;
     public Sprite missionIcon;
 
     [TextArea(5, 10)]
-    public string missionDescription;
-
+    public string details;
 }

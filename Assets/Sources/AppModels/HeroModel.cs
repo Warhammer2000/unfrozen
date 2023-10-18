@@ -7,43 +7,49 @@ namespace UnfrozenTestProject
 {
     public class HeroModel : IModel
     {
-        private string name;
-        private int score;
-        private string avatarURL;
+        private string _name;
+        private int _score;
+        private string _avatarURL;
 
+        public HeroModel(string name, int score, string avatarURL)
+        {
+            _name = name;
+            _score = score;
+            _avatarURL = avatarURL;
+        }
         public string Name
         {
-            get => name;
+            get => _name;
             set
             {
-                if (value != name)
+                if (value != _name)
                 {
-                    name = value;
-                    PropertyChanged?.Invoke(nameof(Name), name);
+                    _name = value;
+                    PropertyChanged?.Invoke(nameof(Name), _name);
                 }
             }
         }
         public int Score
         {
-            get => score;
+            get => _score;
             set
             {
                 if (value != Score)
                 {
-                    score = value;
-                    PropertyChanged?.Invoke(nameof(Score), score);
+                    _score = value;
+                    PropertyChanged?.Invoke(nameof(Score), _score);
                 }
             }
         }
         public string AvatarURL
         {
-            get => avatarURL;
+            get => _avatarURL;
             set
             {
-                if (value != avatarURL)
+                if (value != _avatarURL)
                 {
-                    avatarURL = value;
-                    PropertyChanged?.Invoke(nameof(AvatarURL), avatarURL);
+                    _avatarURL = value;
+                    PropertyChanged?.Invoke(nameof(AvatarURL), _avatarURL);
                 }
             }
         }

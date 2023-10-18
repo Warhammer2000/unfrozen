@@ -5,7 +5,7 @@ namespace UnfrozenTestProject
     public class CardModel : IModel
     {
         private HeroModel heroModel;
-
+        
         public HeroModel HeroModel
         {
             get => heroModel;
@@ -14,7 +14,7 @@ namespace UnfrozenTestProject
                 if (value != heroModel)
                 {
                     heroModel = value;
-                    PropertyChanged?.Invoke(nameof(HeroModel), heroModel);
+                    PropertyChanged?.Invoke("HeroModel", heroModel);
                 }
             }
         }

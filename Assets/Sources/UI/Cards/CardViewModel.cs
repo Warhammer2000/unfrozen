@@ -8,13 +8,14 @@ namespace UnfrozenTestProject
     [RequireComponent(typeof(CardView))]
     public class CardViewModel : MonoBehaviour
     {
-        private CardModel model;
+        [SerializeField] private CardModel model;
         private CardView cardView;
 
         public event Action<string> HeroNameChanged;
 
         private void Awake()
         {
+            Debug.Log(HeroNameChanged);
             model = new CardModel();
             cardView = GetComponent<CardView>();
 
@@ -27,6 +28,7 @@ namespace UnfrozenTestProject
             {
                 HeroNameChanged?.Invoke((string)value);
             }
+
         }
     }
 }
