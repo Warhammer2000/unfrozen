@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
+using UnityEditor.Android;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +13,22 @@ namespace UnfrozenTestProject
         [SerializeField] private TextMeshProUGUI missionNameTMP;
         [SerializeField] private Image missionImage;
         [SerializeField] private TextMeshProUGUI mssionDetailsTMP;
+        [SerializeField] private TextMeshProUGUI mssionHeroTMP;
+        [SerializeField] private ControllerService controller;
+        [SerializeField] private TaskPanelViewModel viewmodel;
 
+
+        private void Start()
+        {
+            viewmodel = GetComponent<TaskPanelViewModel>();
+            SetMissionHero();
+
+
+        }
         public void Initialize(IViewModel viewModel)
         {
             var vm = viewModel as TaskPanelViewModel;
+            Debug.Log(vm);
             vm.OnDescriptionChange += HandleDescriptionChanged;
         }
 
@@ -39,5 +53,15 @@ namespace UnfrozenTestProject
         {
             missionImage.sprite = value;
         }
+        private void SetMissionHero()
+        {
+            if (viewmodel.isMissionBar)
+            {
+               // mssionHeroTMP.text = controller.cardViewModel.model.HeroModel.Name;
+            }
+            else return;
+        }
+
     }
 }
+

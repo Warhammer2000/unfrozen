@@ -14,7 +14,8 @@ namespace UnfrozenTestProject
         [SerializeField] private TextMeshProUGUI heroNameTMP;
         [SerializeField] private Image heroAvatarImage;
 
-        private CardViewModel cardViewModel;
+        [SerializeField] private CardViewModel cardViewModel;
+        [SerializeField] private HeroModel currentHeroModel;
 
         public void Initialize(IViewModel viewModel)
         {
@@ -23,14 +24,68 @@ namespace UnfrozenTestProject
                 throw new ArgumentException("Invalid viewModel type");
             }
 
+            HeroModelNameChangeHandler(currentHeroModel);
             cardViewModel = viewModel as CardViewModel;
 
-            cardViewModel.HeroNameChanged += HeroModelNameChangeHandler;
+            cardViewModel.HeroModelChanged += HeroModelNameChangeHandler;
         }
 
-        private void HeroModelNameChangeHandler(string value)
+        private void HeroModelNameChangeHandler(HeroModel model)
         {
-            heroNameTMP.text = value;
+            if (currentHeroModel != null)
+            {
+                currentHeroModel.PropertyChanged -= HandleHeroModelPropertyChange;
+            }
+
+            currentHeroModel = model;
+            currentHeroModel.PropertyChanged += HandleHeroModelPropertyChange;
+
+            Repaint();
+        }
+
+        public void Repaint()
+        {
+            if (currentHeroModel == null)
+            {
+                return;
+            }
+
+            HeroNameChangeHandler(currentHeroModel.Name);
+            HeroScoreChangeHandler(currentHeroModel.Score);
+            HeroAvaraImageChangeHandler(currentHeroModel.Avatar);
+        }
+
+        private void HandleHeroModelPropertyChange(string prop, object _)
+        {
+            switch (prop)
+            {
+                case nameof(currentHeroModel.Name):
+                    HeroNameChangeHandler(currentHeroModel.Name);
+                    break;
+
+                case nameof(currentHeroModel.Avatar):
+                    HeroAvaraImageChangeHandler(currentHeroModel.Avatar);
+                    break;
+
+                case nameof(currentHeroModel.Score):
+                    HeroScoreChangeHandler(currentHeroModel.Score);
+                    break;
+            }
+        }
+
+        private void HeroNameChangeHandler(string name)
+        {
+            heroNameTMP.text = name;
+        }
+
+        private void HeroScoreChangeHandler(int score)
+        {
+            scoreTMP.text = score.ToString();
+        }
+
+        private void HeroAvaraImageChangeHandler(Sprite avatar)
+        {
+            heroAvatarImage.sprite = avatar;
         }
     }
 }

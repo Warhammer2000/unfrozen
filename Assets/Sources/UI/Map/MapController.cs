@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnfrozenTestProject
 {
@@ -9,10 +11,14 @@ namespace UnfrozenTestProject
     {
         [SerializeField] private List<MissionDescription> descriptions;
 
-        private List<MissionButton> buttons;
+        [SerializeField] private List<MissionButton> buttons;
 
         public Action<MissionDescription> OnChooseMission;
 
+        [SerializeField] private List<Button> buttononetwo;
+
+        public Button[] buttonsToDisable;
+        public float index = 0;
         private void Awake()
         {
             buttons = new List<MissionButton>(16);
@@ -32,5 +38,12 @@ namespace UnfrozenTestProject
             var desription = descriptions.Find(x => x.id == id);
             OnChooseMission?.Invoke(desription);
         }
+        public void CompleteMission()
+        {
+            if (index == 31 ) buttononetwo[0].interactable = false;
+            else if (index == 32) buttononetwo[1].interactable = false;
+            else buttonsToDisable[(int)index].interactable = false;
+        }
+        
     }
 }

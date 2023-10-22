@@ -1,22 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 namespace UnfrozenTestProject
 {
-    public class HeroModel : IModel
+    [CreateAssetMenu(menuName = "Heroes/Create hero", fileName = "Hero")]
+    public class HeroModel : ScriptableObject, IModel
     {
-        private string _name;
-        private int _score;
-        private string _avatarURL;
+        [SerializeField] private string _name;
+        [SerializeField] private Sprite avatar;
+        [SerializeField] private string _id;
+        public int score;
 
-        public HeroModel(string name, int score, string avatarURL)
+        public void IncreaseScrore(int score)
         {
-            _name = name;
-            _score = score;
-            _avatarURL = avatarURL;
+            this.score += score;
         }
+
         public string Name
         {
             get => _name;
@@ -31,28 +33,30 @@ namespace UnfrozenTestProject
         }
         public int Score
         {
-            get => _score;
+            get => score;
             set
             {
                 if (value != Score)
                 {
-                    _score = value;
-                    PropertyChanged?.Invoke(nameof(Score), _score);
+                    score = value;
+                    PropertyChanged?.Invoke(nameof(Score), score);
                 }
             }
         }
-        public string AvatarURL
+        public Sprite Avatar
         {
-            get => _avatarURL;
+            get => avatar;
             set
             {
-                if (value != _avatarURL)
+                if (value != avatar)
                 {
-                    _avatarURL = value;
-                    PropertyChanged?.Invoke(nameof(AvatarURL), _avatarURL);
+                    avatar = value;
+                    PropertyChanged?.Invoke(nameof(Avatar), avatar);
                 }
             }
         }
+
+        public string Id => _id;
 
         public event Action<string, object> PropertyChanged;
     }

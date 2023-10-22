@@ -14,8 +14,10 @@ namespace UnfrozenTestProject
         [SerializeField] private MapController mapController;
         [SerializeField] private TaskPanelView view;
         [SerializeField] private GameObject content;
-        [SerializeField] private bool isMissionBar;
+
+        public bool isMissionBar;
         public event Action<MissionDescription> OnDescriptionChange;
+
 
         private void Awake()
         {
@@ -40,6 +42,7 @@ namespace UnfrozenTestProject
                 if (!isMissionBar)
                 {
                     content.SetActive(true);
+                    Debug.Log(content);
                     OnDescriptionChange?.Invoke(model.MissionDescription);
                 }
                 else

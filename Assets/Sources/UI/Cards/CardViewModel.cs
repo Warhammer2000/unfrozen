@@ -1,34 +1,44 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace UnfrozenTestProject
 {
     [RequireComponent(typeof(CardView))]
-    public class CardViewModel : MonoBehaviour
+    public class CardViewModel : MonoBehaviour, IViewModel
     {
-        [SerializeField] private CardModel model;
+        public CardModel model;   
         private CardView cardView;
+        public HeroesProvider heroesProvider;
 
-        public event Action<string> HeroNameChanged;
+        public int id;
+
+        public event Action<HeroModel> HeroModelChanged;
 
         private void Awake()
         {
-            Debug.Log(HeroNameChanged);
             model = new CardModel();
+
+            
+            heroesProvider = FindObjectOfType<HeroesProvider>();
+            model.PropertyChanged += CardModelPropertyChangehandler;
+            model.HeroModel = heroesProvider.GetHeroModel("0");
+
             cardView = GetComponent<CardView>();
-
-            model.HeroModel.PropertyChanged += HeroModelChangeHandler;
+            cardView.Initialize(this);
         }
-
-        private void HeroModelChangeHandler(string property, object value)
+        private void Start()
         {
-            if (property == nameof(model.HeroModel.Name))
-            {
-                HeroNameChanged?.Invoke((string)value);
+        }
+     
+        private void CardModelPropertyChangehandler(string prop, object _)
+        {
+            if (prop == nameof(model.HeroModel))
+             {
+                HeroModelChanged?.Invoke(model.HeroModel);
             }
-
         }
     }
 }
