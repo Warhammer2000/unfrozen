@@ -95,7 +95,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.55
+  m_fontSize: 8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.7
+  m_fontSize: 8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -610,7 +610,6 @@ GameObject:
   - component: {fileID: 4592332491737498200}
   - component: {fileID: 4592332491737498201}
   - component: {fileID: 4592332491737498202}
-  - component: {fileID: 4592332491737498203}
   m_Layer: 5
   m_Name: HeroCard
   m_TagString: Untagged
@@ -711,6 +710,8 @@ MonoBehaviour:
   scoreTMP: {fileID: 4592332490160051884}
   heroNameTMP: {fileID: 4592332490139557037}
   heroAvatarImage: {fileID: 4592332491918099410}
+  cardViewModel: {fileID: 0}
+  currentHeroModel: {fileID: 0}
 --- !u!114 &4592332491737498201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,20 +770,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4592332491737498203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592332491737498194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2ff7cf0928a2347bd1f1a4bccb5474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  isChoosen: 0
 --- !u!1 &4592332491750218105
 GameObject:
   m_ObjectHideFlags: 0

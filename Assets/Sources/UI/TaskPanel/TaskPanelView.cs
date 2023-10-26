@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
+using System;
 using TMPro;
-using UnityEditor.Android;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,29 +11,28 @@ namespace UnfrozenTestProject
         [SerializeField] private Image missionImage;
         [SerializeField] private TextMeshProUGUI mssionDetailsTMP;
         [SerializeField] private TextMeshProUGUI mssionHeroTMP;
-        [SerializeField] private ControllerService controller;
         [SerializeField] private TaskPanelViewModel viewmodel;
+        [SerializeField] private Button taskContextButton;
 
+        public event Action ContextButtonClick;
 
-        private void Start()
-        {
-            viewmodel = GetComponent<TaskPanelViewModel>();
-            SetMissionHero();
-
-
-        }
         public void Initialize(IViewModel viewModel)
         {
-            var vm = viewModel as TaskPanelViewModel;
-            Debug.Log(vm);
-            vm.OnDescriptionChange += HandleDescriptionChanged;
+            viewmodel = viewModel as TaskPanelViewModel;
+            viewmodel.OnDescriptionChange += HandleDescriptionChanged;
+
+            if (taskContextButton != null) taskContextButton.onClick.AddListener(() => ContextButtonClick?.Invoke());
+            else Debug.Log(taskContextButton);
         }
 
         private void HandleDescriptionChanged(MissionDescription description)
         {
-            SetMissionDetails(description.details);
-            SetMissionIcon(description.missionIcon);
-            SetMissionName(description.title);
+            if (description != null)
+            {
+                SetMissionDetails(description.details);
+                SetMissionIcon(description.missionIcon);
+                SetMissionName(description.title);
+            }
         }
 
         private void SetMissionName(string value)
@@ -53,15 +49,6 @@ namespace UnfrozenTestProject
         {
             missionImage.sprite = value;
         }
-        private void SetMissionHero()
-        {
-            if (viewmodel.isMissionBar)
-            {
-               // mssionHeroTMP.text = controller.cardViewModel.model.HeroModel.Name;
-            }
-            else return;
-        }
-
     }
 }
 

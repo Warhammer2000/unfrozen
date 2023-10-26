@@ -15,21 +15,21 @@ namespace UnfrozenTestProject
         [SerializeField] private Image heroAvatarImage;
 
         [SerializeField] private CardViewModel cardViewModel;
-        [SerializeField] private HeroModel currentHeroModel;
+        private HeroModel currentHeroModel;
 
+       
         public void Initialize(IViewModel viewModel)
         {
             if (!(viewModel is CardViewModel))
             {
                 throw new ArgumentException("Invalid viewModel type");
             }
-
-            HeroModelNameChangeHandler(currentHeroModel);
-            cardViewModel = viewModel as CardViewModel;
-
+  
+            cardViewModel = viewModel as CardViewModel; 
             cardViewModel.HeroModelChanged += HeroModelNameChangeHandler;
         }
 
+      
         private void HeroModelNameChangeHandler(HeroModel model)
         {
             if (currentHeroModel != null)
@@ -38,9 +38,12 @@ namespace UnfrozenTestProject
             }
 
             currentHeroModel = model;
-            currentHeroModel.PropertyChanged += HandleHeroModelPropertyChange;
 
-            Repaint();
+            if (currentHeroModel != null)
+            {
+                currentHeroModel.PropertyChanged += HandleHeroModelPropertyChange;
+                Repaint();
+            }
         }
 
         public void Repaint()

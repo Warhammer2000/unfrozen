@@ -5,51 +5,29 @@ using UnfrozenTestProject;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MissionButton : MonoBehaviour
+namespace UnfrozenTestProject
 {
-    public float Id;
-    private Button taskButton;
-
-    public MissionDescription Missions;
-    public Action<float> OnClick;
-
-    public MapController mapController;
-    public HeroModel heroModel;
-
-    [SerializeField] private GameObject cardPrefab;
-    [SerializeField] private Transform cardTransform;
-
-    [SerializeField] private Button missionCompleteButton;
-    private void Start()
+    public class MissionButton : MonoBehaviour
     {
-        taskButton = GetComponent<Button>();
-        taskButton.onClick.AddListener(OnTaskButtonClick);
-        taskButton.onClick.AddListener(Indexator);
-        missionCompleteButton.onClick.AddListener(CreateNewCard);
-    }
+        [SerializeField] private float Id;
+        private Button missionButton;
 
-    private void OnTaskButtonClick()
-    {
-        OnClick?.Invoke(Id);
-    }
-    public void Indexator()
-    {
-        mapController.index = Id;
-    }
-    public void IO()
-    {
-        heroModel = Missions.heroModel;
-    }
-    public void CreateNewCard()
-    {
-        if (Id >= 1)
+        public Action<float> OnClick;
+        public HeroesProvider heroprovider;
+        public TaskPanelViewModel taskpanel;
+        private void Start()
         {
-            return;
+            missionButton = GetComponent<Button>();
+            missionButton.onClick.AddListener(TaskButtonClickHandler);
+            heroprovider = FindAnyObjectByType<HeroesProvider>();
         }
-        GameObject card = Instantiate(cardPrefab, cardTransform);
-        CardViewModel cardViewModel = card.GetComponent<CardViewModel>();
-        cardViewModel.heroesProvider.GetHeroModel("0");
-        
-        
+
+        public void TaskButtonClickHandler()
+        {
+            OnClick?.Invoke(Id);
+            heroprovider.GetId(Id);
+            taskpanel.ButtonGetterToDisable(missionButton);
+
+        }
     }
 }

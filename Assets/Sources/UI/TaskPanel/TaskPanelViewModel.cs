@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,19 +10,21 @@ namespace UnfrozenTestProject
 {
     public class TaskPanelViewModel : MonoBehaviour, IViewModel
     {
-        private TaskPanelModel model;
+        private TaskPanelModel _model;
+        private Button _buttonForDisable;
+        [SerializeField] private float idForModel;
 
+        [SerializeField] private bool StartMission;
         [SerializeField] private MapController mapController;
         [SerializeField] private TaskPanelView view;
         [SerializeField] private GameObject content;
+        [SerializeField] private GameObject completeTaskPanel;
 
-        public bool isMissionBar;
         public event Action<MissionDescription> OnDescriptionChange;
-
 
         private void Awake()
         {
-            model = new TaskPanelModel();
+            _model = new TaskPanelModel();
             view.Initialize(this);
         }
 
@@ -29,27 +32,43 @@ namespace UnfrozenTestProject
         {
             mapController.OnChooseMission += (descr) =>
             {
-                model.MissionDescription = descr;
+                _model.MissionDescription = descr;
             };
 
-            model.PropertyChanged += HandleModelPropertyChange;
+            _model.PropertyChanged += HandleModelPropertyChange;
+            view.ContextButtonClick += HandleMissionContextButton;
         }
 
         private void HandleModelPropertyChange(string propertyName, object value)
         {
-            if (propertyName == nameof(model.MissionDescription))
+            if (propertyName == nameof(_model.MissionDescription))
             {
-                if (!isMissionBar)
-                {
-                    content.SetActive(true);
-                    Debug.Log(content);
-                    OnDescriptionChange?.Invoke(model.MissionDescription);
-                }
-                else
-                {
-                    OnDescriptionChange?.Invoke(model.MissionDescription);
-                }
+                content.SetActive(true);
+                OnDescriptionChange?.Invoke(_model.MissionDescription);
             }
         }
+
+        private void HandleMissionContextButton()
+        {
+            if (StartMission)
+            {
+                completeTaskPanel.SetActive(true);
+                Debug.Log("Миссия начата! Прочитайте подробности");
+            }
+            else
+            {
+                completeTaskPanel.SetActive(false);
+                content.SetActive(false);
+                CardsCreator.onTouched?.Invoke();
+                Debug.Log("Миссия успешно заверешена!");
+                InteractableButtonService.GetTouched?.Invoke(_buttonForDisable);
+                _buttonForDisable.interactable = false;
+            }
+        }
+        public void ButtonGetterToDisable(Button _button)
+        {
+            _buttonForDisable = _button;
+        }
+
     }
 }

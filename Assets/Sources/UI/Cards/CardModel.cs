@@ -14,7 +14,7 @@ namespace UnfrozenTestProject
                 if (value != heroModel)
                 {
                     heroModel = value;
-                    PropertyChanged?.Invoke(nameof(heroModel), heroModel);
+                    PropertyChanged?.Invoke(("HeroModel"), heroModel);
                 }
             }
         }

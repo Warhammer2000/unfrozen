@@ -38,12 +38,5 @@ namespace UnfrozenTestProject
             var desription = descriptions.Find(x => x.id == id);
             OnChooseMission?.Invoke(desription);
         }
-        public void CompleteMission()
-        {
-            if (index == 31 ) buttononetwo[0].interactable = false;
-            else if (index == 32) buttononetwo[1].interactable = false;
-            else buttonsToDisable[(int)index].interactable = false;
-        }
-        
     }
 }

@@ -12,12 +12,8 @@ namespace UnfrozenTestProject
         [SerializeField] private string _name;
         [SerializeField] private Sprite avatar;
         [SerializeField] private string _id;
-        public int score;
 
-        public void IncreaseScrore(int score)
-        {
-            this.score += score;
-        }
+        private int score;
 
         public string Name
         {

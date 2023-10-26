@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 1485440152918612975}
   - component: {fileID: 6956530813999998525}
   m_Layer: 5
-  m_Name: Task
+  m_Name: TaskPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

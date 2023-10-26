@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.033018887, b: 0.033018887, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -242,9 +242,9 @@ GameObject:
   - component: {fileID: 61483740}
   - component: {fileID: 61483744}
   - component: {fileID: 61483743}
+  - component: {fileID: 61483745}
   - component: {fileID: 61483741}
   - component: {fileID: 61483742}
-  - component: {fileID: 61483745}
   m_Layer: 5
   m_Name: MissionButton 9
   m_TagString: Untagged
@@ -382,13 +382,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 7
-  Missions: {fileID: 11400000, guid: 48688c37e1e74374194a9d7be8a10329, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 9
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &186972091
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,9 +396,9 @@ GameObject:
   - component: {fileID: 186972092}
   - component: {fileID: 186972096}
   - component: {fileID: 186972095}
+  - component: {fileID: 186972097}
   - component: {fileID: 186972093}
   - component: {fileID: 186972094}
-  - component: {fileID: 186972097}
   m_Layer: 5
   m_Name: MissionButton32
   m_TagString: Untagged
@@ -541,12 +537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 32
-  Missions: {fileID: 11400000, guid: aa9d0f2b21e408b4cb5244f807595aa5, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &189672150
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,9 +550,9 @@ GameObject:
   - component: {fileID: 189672151}
   - component: {fileID: 189672155}
   - component: {fileID: 189672154}
+  - component: {fileID: 189672156}
   - component: {fileID: 189672152}
   - component: {fileID: 189672153}
-  - component: {fileID: 189672156}
   m_Layer: 5
   m_Name: MissionButton31
   m_TagString: Untagged
@@ -699,12 +691,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 31
-  Missions: {fileID: 11400000, guid: 3b65071ec9cb791439c46c8192af4cff, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 3f285e2e1f6bcc94b9c50974700d60db, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &196071816
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,9 +839,9 @@ GameObject:
   - component: {fileID: 269106998}
   - component: {fileID: 269107002}
   - component: {fileID: 269107001}
+  - component: {fileID: 269107003}
   - component: {fileID: 269106999}
   - component: {fileID: 269107000}
-  - component: {fileID: 269107003}
   m_Layer: 5
   m_Name: MissionButton 6
   m_TagString: Untagged
@@ -991,13 +979,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 4
-  Missions: {fileID: 11400000, guid: 48f221bed147f694dab3f6aa4383b3dd, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 6
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &292296311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2739707275691447781, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
@@ -1039,6 +1023,7 @@ Transform:
   - {fileID: 417835565}
   - {fileID: 1000716624}
   - {fileID: 2110664320}
+  - {fileID: 2018142817}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1528,14 +1513,13 @@ GameObject:
   - component: {fileID: 440970984}
   - component: {fileID: 440970985}
   - component: {fileID: 440970986}
-  - component: {fileID: 440970987}
   m_Layer: 5
   m_Name: HeroCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &440970979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1555,10 +1539,10 @@ RectTransform:
   m_Father: {fileID: 991868588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 65, y: -100}
+  m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440970980
 MonoBehaviour:
@@ -1630,7 +1614,6 @@ MonoBehaviour:
   heroNameTMP: {fileID: 2071457821}
   heroAvatarImage: {fileID: 24407906}
   cardViewModel: {fileID: 440970985}
-  currentHeroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
 --- !u!114 &440970985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,7 +1627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroesProvider: {fileID: 2110664321}
-  id: 1
+  id: 0
 --- !u!114 &440970986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1688,33 +1671,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1431175301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 440970987}
-        m_TargetAssemblyTypeName: UnfrozenTestProject.ControllerService, Sources
-        m_MethodName: onButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &440970987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440970978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2ff7cf0928a2347bd1f1a4bccb5474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  isChoosen: 0
+      m_Calls: []
 --- !u!1 &460764617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1755,7 @@ GameObject:
   - component: {fileID: 501480493}
   - component: {fileID: 501480492}
   m_Layer: 5
-  m_Name: Content (2)
+  m_Name: EnemyHeroName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2356,10 +2313,10 @@ RectTransform:
   m_Father: {fileID: 440970979}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -59.538464}
+  m_SizeDelta: {x: 84, y: 103.07693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746037430
 MonoBehaviour:
@@ -2392,9 +2349,9 @@ GameObject:
   - component: {fileID: 793431369}
   - component: {fileID: 793431373}
   - component: {fileID: 793431372}
+  - component: {fileID: 793431374}
   - component: {fileID: 793431370}
   - component: {fileID: 793431371}
-  - component: {fileID: 793431374}
   m_Layer: 5
   m_Name: MissionButton 7
   m_TagString: Untagged
@@ -2532,13 +2489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 5
-  Missions: {fileID: 11400000, guid: 840b1bf3182622a4bb3126f9971749af, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 7
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &932495942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,9 +2503,9 @@ GameObject:
   - component: {fileID: 932495943}
   - component: {fileID: 932495947}
   - component: {fileID: 932495946}
+  - component: {fileID: 932495948}
   - component: {fileID: 932495944}
   - component: {fileID: 932495945}
-  - component: {fileID: 932495948}
   m_Layer: 5
   m_Name: MissionButton 8
   m_TagString: Untagged
@@ -2690,13 +2643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 6
-  Missions: {fileID: 11400000, guid: e094f07bd2c1c4c46a0aa9e825ccfd71, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 8
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,9 +3078,9 @@ GameObject:
   - component: {fileID: 1046799581}
   - component: {fileID: 1046799585}
   - component: {fileID: 1046799584}
+  - component: {fileID: 1046799586}
   - component: {fileID: 1046799582}
   - component: {fileID: 1046799583}
-  - component: {fileID: 1046799586}
   m_Layer: 5
   m_Name: MissionButton 4
   m_TagString: Untagged
@@ -3269,13 +3218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 2
-  Missions: {fileID: 11400000, guid: 8a4c3cc2304e80f43b34a331eb99db31, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 4
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &1092877403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,9 +3367,9 @@ GameObject:
   - component: {fileID: 1097163988}
   - component: {fileID: 1097163992}
   - component: {fileID: 1097163991}
+  - component: {fileID: 1097163993}
   - component: {fileID: 1097163989}
   - component: {fileID: 1097163990}
-  - component: {fileID: 1097163993}
   m_Layer: 5
   m_Name: MissionButton 11
   m_TagString: Untagged
@@ -3562,13 +3507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 9
-  Missions: {fileID: 11400000, guid: 905b5324bf7ce284180962678513befd, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 11
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &1109670232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,9 +3787,9 @@ GameObject:
   - component: {fileID: 1151762455}
   - component: {fileID: 1151762459}
   - component: {fileID: 1151762458}
+  - component: {fileID: 1151762460}
   - component: {fileID: 1151762456}
   - component: {fileID: 1151762457}
-  - component: {fileID: 1151762460}
   m_Layer: 5
   m_Name: MissionButton 10
   m_TagString: Untagged
@@ -3986,13 +3927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 8
-  Missions: {fileID: 11400000, guid: 29f726888c7dabd45a62c91c32ecf3e9, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 10
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &1160198195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,7 +4646,7 @@ GameObject:
   - component: {fileID: 1327330773}
   - component: {fileID: 1327330772}
   m_Layer: 5
-  m_Name: Content (1)
+  m_Name: TaskDescr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4815,7 +4752,7 @@ GameObject:
   - component: {fileID: 1361909499}
   - component: {fileID: 1361909498}
   m_Layer: 5
-  m_Name: CanvasMission
+  m_Name: CanvasTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4913,10 +4850,10 @@ RectTransform:
   m_Father: {fileID: 440970979}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -126.53847}
+  m_SizeDelta: {x: 84, y: 30.923079}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401236278
 MonoBehaviour:
@@ -5170,9 +5107,9 @@ GameObject:
   - component: {fileID: 1449744870}
   - component: {fileID: 1449744874}
   - component: {fileID: 1449744873}
+  - component: {fileID: 1449744875}
   - component: {fileID: 1449744871}
   - component: {fileID: 1449744872}
-  - component: {fileID: 1449744875}
   m_Layer: 5
   m_Name: MissionButton 5
   m_TagString: Untagged
@@ -5310,13 +5247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 3
-  Missions: {fileID: 11400000, guid: 07c5907aedda76c44ab148895d9ab1f2, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 5
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!114 &1484810636 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1485440152918612975, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
@@ -5726,13 +5659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 0
-  Missions: {fileID: 11400000, guid: 33d424688d2ec7f4e9547d48645f2a36, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
-  cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
+  Id: 1
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
 --- !u!1 &1657246467
 GameObject:
   m_ObjectHideFlags: 0
@@ -6360,9 +6289,9 @@ GameObject:
   - component: {fileID: 1986191862}
   - component: {fileID: 1986191866}
   - component: {fileID: 1986191865}
+  - component: {fileID: 1986191867}
   - component: {fileID: 1986191863}
   - component: {fileID: 1986191864}
-  - component: {fileID: 1986191867}
   m_Layer: 5
   m_Name: MissionButton 2
   m_TagString: Untagged
@@ -6500,13 +6429,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054eb7b6ec389d441b04d1c7671592a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 1
-  Missions: {fileID: 11400000, guid: 33d424688d2ec7f4e9547d48645f2a36, type: 2}
-  mapController: {fileID: 1119717799}
-  heroModel: {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
+  Id: 2
+  heroprovider: {fileID: 0}
+  taskpanel: {fileID: 2993363937386213165}
+--- !u!1 &2018142816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018142817}
+  - component: {fileID: 2018142818}
+  m_Layer: 0
+  m_Name: CardsCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2018142817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018142816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299158148}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2018142818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018142816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdce93e4c94a43489ead705fdf6d855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsRoot: {fileID: 991868588}
   cardPrefab: {fileID: 4592332491737498194, guid: f7dea4004ee8bda4582ce5a28be609ef, type: 3}
-  cardTransform: {fileID: 991868588}
-  missionCompleteButton: {fileID: 1220726624}
 --- !u!1 &2018425370
 GameObject:
   m_ObjectHideFlags: 0
@@ -7234,7 +7205,7 @@ GameObject:
   - component: {fileID: 2104213056}
   - component: {fileID: 2104213055}
   m_Layer: 5
-  m_Name: CanvasMissionBar
+  m_Name: CanvasTaskComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7421,10 +7392,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
+  - {fileID: 11400000, guid: d223f17d9fb474d4988068fb8e670cd9, type: 2}
   - {fileID: 11400000, guid: 2a5b40f379840f6419edb4f32d3a607c, type: 2}
   - {fileID: 11400000, guid: 70c8d6c559a0dce438d861818cae125a, type: 2}
   - {fileID: 11400000, guid: 3f285e2e1f6bcc94b9c50974700d60db, type: 2}
   - {fileID: 11400000, guid: 72e3fb441fdceea40b462d3d23c69e57, type: 2}
+  id: 0
 --- !u!1 &2119767095
 GameObject:
   m_ObjectHideFlags: 0
@@ -7680,9 +7653,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1485440152918612975, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
+      propertyPath: IsMissionBar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485440152918612975, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
+      propertyPath: StartMission
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485440152918612975, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
       propertyPath: mapController
       value: 
       objectReference: {fileID: 1119717799}
+    - target: {fileID: 1485440152918612975, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
+      propertyPath: completeTaskPanel
+      value: 
+      objectReference: {fileID: 2993363937386213137}
     - target: {fileID: 1485440152975759227, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7794,11 +7779,15 @@ PrefabInstance:
     - target: {fileID: 6956530813999998525, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 440970987}
+      objectReference: {fileID: 0}
     - target: {fileID: 6956530813999998525, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
       propertyPath: missionImage
       value: 
       objectReference: {fileID: 488631575}
+    - target: {fileID: 6956530813999998525, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
+      propertyPath: taskContextButton
+      value: 
+      objectReference: {fileID: 1485440153164548494}
     - target: {fileID: 7412380504666834775, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
       propertyPath: m_Text
       value: "\u041D\u0430\u0447\u0430\u0442\u044C \u043C\u0438\u0441\u0441\u0438\u044E"
@@ -7861,6 +7850,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
+--- !u!114 &1485440153164548494 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4537058718633059452, guid: 5f43a8ef97cdc464fa8c525eb5931db9, type: 3}
+  m_PrefabInstance: {fileID: 1485440153164548493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1950799807176646951
 GameObject:
   m_ObjectHideFlags: 0
@@ -7874,7 +7874,7 @@ GameObject:
   - component: {fileID: 4402206335552486198}
   - component: {fileID: 6239757191662220308}
   m_Layer: 5
-  m_Name: Content
+  m_Name: PlayerHeroName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7917,7 +7917,7 @@ GameObject:
   - component: {fileID: 6745627797064585983}
   - component: {fileID: 6745627797064585984}
   m_Layer: 5
-  m_Name: MissionCompleteBar
+  m_Name: TaskCompletePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7935,10 +7935,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8166e739e63e1324a88158fea40ddfea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idForModel: 0
+  StartMission: 0
   mapController: {fileID: 1119717799}
   view: {fileID: 6745627797064585983}
   content: {fileID: 1950799807176646951}
-  isMissionBar: 1
+  completeTaskPanel: {fileID: 2993363937386213137}
+  button: {fileID: 0}
 --- !u!222 &2993363937386213166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8183,8 +8186,8 @@ MonoBehaviour:
   missionImage: {fileID: 980465199}
   mssionDetailsTMP: {fileID: 2078938869}
   mssionHeroTMP: {fileID: 4402206335279544797}
-  controller: {fileID: 440970987}
   viewmodel: {fileID: 0}
+  taskContextButton: {fileID: 1220726624}
 --- !u!114 &6745627797064585984
 MonoBehaviour:
   m_ObjectHideFlags: 0
