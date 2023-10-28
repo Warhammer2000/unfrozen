@@ -27,7 +27,6 @@ namespace UnfrozenTestProject
             OnClick?.Invoke(Id);
             heroprovider.GetId(Id);
             taskpanel.ButtonGetterToDisable(missionButton);
-
         }
     }
 }

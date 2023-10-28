@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +17,13 @@ namespace UnfrozenTestProject
 
         [SerializeField] private CardViewModel cardViewModel;
         private HeroModel currentHeroModel;
+        private CardsCheker Cardscheker;
 
-       
+        private void Start()
+        {
+            Cardscheker = GetComponent<CardsCheker>();
+        }
+
         public void Initialize(IViewModel viewModel)
         {
             if (!(viewModel is CardViewModel))
@@ -45,17 +51,23 @@ namespace UnfrozenTestProject
                 Repaint();
             }
         }
-
+        private void FixedUpdate()
+        {
+            Repaint();            
+        }
         public void Repaint()
         {
             if (currentHeroModel == null)
             {
+                Destroy(gameObject);
                 return;
             }
 
             HeroNameChangeHandler(currentHeroModel.Name);
             HeroScoreChangeHandler(currentHeroModel.Score);
             HeroAvaraImageChangeHandler(currentHeroModel.Avatar);
+
+            Cardscheker.Cheker(heroAvatarImage);
         }
 
         private void HandleHeroModelPropertyChange(string prop, object _)
@@ -90,5 +102,6 @@ namespace UnfrozenTestProject
         {
             heroAvatarImage.sprite = avatar;
         }
+       
     }
 }

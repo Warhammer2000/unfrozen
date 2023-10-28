@@ -19,6 +19,8 @@ namespace UnfrozenTestProject
             }
         }
 
+        public static  Action MissionCompleteScrore;
+
         public event Action<string, object> PropertyChanged;
     }
 }

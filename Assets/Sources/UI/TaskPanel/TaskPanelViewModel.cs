@@ -63,6 +63,7 @@ namespace UnfrozenTestProject
                 Debug.Log("Миссия успешно заверешена!");
                 InteractableButtonService.GetTouched?.Invoke(_buttonForDisable);
                 _buttonForDisable.interactable = false;
+                CardModel.MissionCompleteScrore?.Invoke();
             }
         }
         public void ButtonGetterToDisable(Button _button)
